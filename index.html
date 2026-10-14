@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chart.js Samples</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #36a2eb, #ff6384);
+            color: #fff;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; margin-bottom: .4rem; }
+        header p { opacity: .9; font-size: 1rem; }
+        main { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .category { margin-bottom: 2rem; }
+        .category h2 {
+            font-size: 1.25rem;
+            margin-bottom: .75rem;
+            padding-bottom: .4rem;
+            border-bottom: 2px solid #e0e6ed;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: .75rem;
+        }
+        .grid a {
+            display: block;
+            padding: .8rem 1rem;
+            background: #fff;
+            border: 1px solid #e0e6ed;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: .9rem;
+            transition: border-color .15s, box-shadow .15s, transform .1s;
+        }
+        .grid a:hover {
+            border-color: #36a2eb;
+            box-shadow: 0 2px 8px rgba(54,162,235,.18);
+            transform: translateY(-1px);
+        }
+        footer { text-align: center; padding: 2rem; color: #95a5a6; font-size: .85rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chart.js Samples</h1>
+        <p>Simple HTML5 Charts using the canvas element &middot; v2.5.0</p>
+    </header>
+    <main>
+        <div class="category">
+            <h2>Line Charts</h2>
+            <div class="grid">
+                <a href="samples/line/line.html">Basic Line</a>
+                <a href="samples/line/line-multi-axis.html">Multi Axis</a>
+                <a href="samples/line/line-stacked-area.html">Stacked Area</a>
+                <a href="samples/line/line-stepped.html">Stepped</a>
+                <a href="samples/line/line-styles.html">Line Styles</a>
+                <a href="samples/line/line-skip-points.html">Skip Points</a>
+                <a href="samples/line/interpolation-modes.html">Interpolation Modes</a>
+                <a href="samples/line/point-styles.html">Point Styles</a>
+                <a href="samples/line/different-point-sizes.html">Different Point Sizes</a>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Bar Charts</h2>
+            <div class="grid">
+                <a href="samples/bar/bar.html">Basic Bar</a>
+                <a href="samples/bar/bar-horizontal.html">Horizontal Bar</a>
+                <a href="samples/bar/bar-multi-axis.html">Multi Axis</a>
+                <a href="samples/bar/bar-stacked.html">Stacked</a>
+                <a href="samples/bar/bar-stacked-group.html">Stacked Group</a>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Other Chart Types</h2>
+            <div class="grid">
+                <a href="samples/bubble.html">Bubble</a>
+                <a href="samples/combo-bar-line.html">Combo Bar / Line</a>
+                <a href="samples/doughnut.html">Doughnut</a>
+                <a href="samples/pie.html">Pie</a>
+                <a href="samples/polar-area.html">Polar Area</a>
+                <a href="samples/radar/radar.html">Radar</a>
+                <a href="samples/radar/radar-skip-points.html">Radar Skip Points</a>
+                <a href="samples/data_labelling.html">Data Labelling</a>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Scatter</h2>
+            <div class="grid">
+                <a href="samples/scatter/scatter.html">Basic Scatter</a>
+                <a href="samples/scatter/scatter-multi-axis.html">Multi Axis Scatter</a>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Scales</h2>
+            <div class="grid">
+                <a href="samples/scales/display-settings.html">Display Settings</a>
+                <a href="samples/scales/filtering-labels.html">Filtering Labels</a>
+                <a href="samples/scales/gridlines.html">Grid Lines</a>
+                <a href="samples/scales/multiline-labels.html">Multiline Labels</a>
+                <a href="samples/scales/line-non-numeric-y.html">Non-Numeric Y</a>
+                <a href="samples/scales/linear/min-max-settings.html">Linear Min/Max</a>
+                <a href="samples/scales/linear/step-size.html">Linear Step Size</a>
+                <a href="samples/scales/linear/suggested-min-max-settings.html">Suggested Min/Max</a>
+                <a href="samples/scales/logarithmic/line-logarithmic.html">Logarithmic Line</a>
+                <a href="samples/scales/logarithmic/scatter-logX.html">Logarithmic Scatter</a>
+                <a href="samples/scales/time/line-time-scale.html">Time Scale</a>
+                <a href="samples/scales/time/line-time-point-data.html">Time Point Data</a>
+                <a href="samples/scales/time/combo-time-scale.html">Combo Time Scale</a>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Tooltips</h2>
+            <div class="grid">
+                <a href="samples/tooltips/interaction-modes.html">Interaction Modes</a>
+                <a href="samples/tooltips/position-modes.html">Position Modes</a>
+                <a href="samples/tooltips/tooltip-callbacks.html">Tooltip Callbacks</a>
+                <a href="samples/tooltips/dataPoints-customTooltips.html">Custom Tooltips (Data Points)</a>
+                <a href="samples/tooltips/line-customTooltips.html">Custom Tooltips (Line)</a>
+                <a href="samples/tooltips/pie-customTooltips.html">Custom Tooltips (Pie)</a>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Legend &amp; Animation</h2>
+            <div class="grid">
+                <a href="samples/legend/positions.html">Legend Positions</a>
+                <a href="samples/legend/pointstyle.html">Legend Point Styles</a>
+                <a href="samples/animation/progress-bar.html">Animation Progress Bar</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Chart.js &middot; <a href="http://www.chartjs.org" style="color:#36a2eb">chartjs.org</a> &middot; MIT License
+    </footer>
+</body>
+</html>
