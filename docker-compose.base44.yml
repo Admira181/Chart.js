@@ -1,0 +1,22 @@
+services:
+  web:
+    image: node:8
+    working_dir: /app
+    env_file:
+      - /run/base44/app.env
+    environment:
+      - PORT=3000
+      - BASE44_PREVIEW_MODE
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    command: ["sh", "-ec", "npm install --no-audit --no-fund && mkdir -p dist && node_modules/.bin/browserify src/chart.js --standalone Chart -p bundle-collapser/plugin -o dist/Chart.bundle.js && (node_modules/.bin/watchify src/chart.js --standalone Chart -p bundle-collapser/plugin -o dist/Chart.bundle.js -v &) && node scripts/preview-server.js"]
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/samples/utils.js',function(r){process.exit(r.statusCode===200?0:1)}).on('error',function(){process.exit(1)})"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 120s
